@@ -117,7 +117,7 @@ const loadCard = async n => {
   let currentCountCard = countCard;
   for (let i = currentCountCard; i < currentCountCard + n; i++) {
     await fetchNASAData(
-      new Date(new Date() - dayToDate(i)),
+      new Date(new Date() - dayToDate(i) + hourOffset(-12)),
       addDataToArray,
       addDataToArray
     );
@@ -139,7 +139,6 @@ const onClickListener = async node => {
         nasa_text_translated[index];
       node.setAttribute("class", "btn btn-warning");
       node.innerText = "Reverse";
-
     } else if (node.innerText == "Reverse") {
       cardNode.childNodes[1].childNodes[1].innerText = nasa_text[index];
       node.setAttribute("class", "btn btn-info");
@@ -163,6 +162,8 @@ const changeDataAtIndex = (data, object, index) => {
 };
 
 const dayToDate = n => 24 * 60 * 60 * 1000 * n;
+
+const hourOffset = n => 60 * 60 * 1000 * n;
 
 // Run
 document.addEventListener("DOMContentLoaded", async () => {
