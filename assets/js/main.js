@@ -1,7 +1,7 @@
 // API_KEY
 
-const NASA_API_KEY = "rv0PJPuMUUPL8MSsv3pWqx8QxjpIrHToGfCcnChS";
-const GOOGLE_API_KEY = "AIzaSyC3fvBW2UQrZI3lyOwwJiW7atd1Q0eFAzM";
+const NASA_API_KEY = "";
+const GOOGLE_API_KEY = "";
 
 // Constant
 const DEFAULT_CARD = 10;
